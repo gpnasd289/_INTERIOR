@@ -1,0 +1,62 @@
+.control-label {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.dropdown-item:hover {
+    background-color: rgb(151, 252, 0);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+label[required]::after {
+  content: " (*)";
+  color: red;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.flex-item {
+  flex:1;
+}
+
+.selectpicker {
+  height: auto;
+}
+
+.text {
+  font-weight: normal;
+  color: black;
+  white-space: nowrap;
+  min-height: 1.2em;
+  padding: 0px 10px 1px;
+}
+
+.dropdown-menu li:hover{
+  font-size: 16px;
+  font-weight: 700;
+}
+
+input[type="radio"] {
+  margin-top: -1px;
+  vertical-align: middle;
+}
+.mdi-chevron-left {
+  color: black; 
+  font-size: 20px;
+}
+
+.mdi-chevron-right {
+  color: black;
+  font-size: 20px;
+}
+
+.bill-link {
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgb(94, 4, 4);
+}

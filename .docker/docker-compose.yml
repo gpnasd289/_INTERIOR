@@ -1,0 +1,53 @@
+version: "3.4"
+
+services:
+  nginx:
+    build: ./ubuntu/
+    container_name: nginx
+    volumes:
+      - ./default.conf.local:/etc/nginx/sites-available/default
+      - ../:/var/www/html
+      - ./ubuntu/startup.sh:/startup.sh
+      - ./ubuntu/php.ini:/etc/php/8.1/fpm/php.ini
+    ports:
+      - 80:80
+    networks:
+      - dev_network
+    restart: always
+
+  mariadb:
+    image: mariadb
+    container_name: mariadb
+    restart: always
+    ports:
+      - 3306:3306
+    volumes:
+      - dev_volume:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=dev
+      - MYSQL_ROOT_PASSWORD=root
+    networks:
+      - dev_network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    restart: always
+    links:
+      - mariadb
+    environment:
+      - MYSQL_USERNAME=root
+      - MYSQL_ROOT_PASSWORD=root
+      - PMA_HOST=mariadb
+    ports:
+      - 8081:80
+    networks:
+      - dev_network
+
+networks:
+  dev_network:
+    driver: bridge
+
+volumes:
+  dev_volume:
+    driver: local

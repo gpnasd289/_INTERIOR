@@ -1,0 +1,117 @@
+.navigation {
+    background-color: rgba(59, 57, 57, 1);
+    height: 60px;
+}
+.btn-wrap { 
+    height: 100%;
+    padding-right: 20px;
+}
+
+body {
+    width: 210mm;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 12pt;
+    background: rgb(204,204,204); 
+}
+    * {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    }
+.main-page {
+    
+    width: 210mm;
+    min-height: 297mm;
+    margin: 60px auto;
+    background: white;
+    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+}
+.sub-page {
+    padding: 1cm;   
+}
+@page {
+    size: A4;
+    margin: 0;
+}
+@media print {
+    html, body {
+        width: 210mm;
+        height: 297mm;        
+    }
+    .main-page {
+        margin: 0;
+        border: initial;
+        border-radius: initial;
+        width: initial;
+        min-height: initial;
+        box-shadow: initial;
+        background: initial;
+        page-break-after: always;
+    }
+    }
+    .page-break {
+        page-break-after: always;
+    }
+    .bill-report-header {
+        padding-top:10px;
+    }
+    .bill-report-shop-info {
+        padding-left:20px;
+    }
+    .bill-report-body {
+        padding-top: 40px;
+    }
+    .report-body-title {
+        display: flex;
+        justify-content: center;
+    }
+    .report-body-information {
+        padding-top:40px;
+    }
+    .report-payment {
+        margin-top:10px;
+    }
+    .payment {
+        text-align: left;
+        width: 300px;
+    }
+    .report-title {
+        font-weight: 650;
+    }
+    .report-list-product {
+        padding-top:10px;
+    }
+    .product-name {
+        max-width: 200px;
+        word-wrap: break-word;
+    }
+    .tb-row {
+        font-size: 12px;
+        text-align: center;
+    }
+    .tb-header {
+        font-size: 14px;
+        text-align: center;
+    }
+    th {
+        text-align: center;
+    }
+
+    .bill-report-footer {
+        margin-top: 100px;
+    }
+    .report-time {
+        text-align: right;
+        padding-right: 5px;
+    }
+    .report-thank-you {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+    .goodbye {
+        position: relative;
+        
+    }
