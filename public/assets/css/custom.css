@@ -341,7 +341,7 @@
 }
 
 
-a[href*="http://127.0.0.1:8000/admin/assets/css/mycss.css"] {
+a[href*="localhost/admin/assets/css/mycss.css"] {
     display: none;
 }
 .loader-29 {

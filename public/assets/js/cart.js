@@ -47,7 +47,7 @@ function addToCart(id, qty, url) {
                 update(e);
             }
         },
-        failure: function (e) {
+        error: function (e) {
             console.log(e);
         },
     });
@@ -72,7 +72,7 @@ function removeFromCart(rowId, url) {
             showDeleteMessage();
             update(e);
         },
-        failure: function (e) {
+        error: function (e) {
             console.log(e);
         },
     });
