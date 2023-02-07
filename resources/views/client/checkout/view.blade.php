@@ -129,7 +129,7 @@
                           <div class="form-floating">
                             <label for="floatingInput4Grid">Căn hộ, số nhà, tên đường 1 (Tùy chọn)</label>
                             <input type="text" class="form-control" id="address_detail_1"
-                              placeholder="Nguyễn Đình Chiểu, quận Phú Nhuận, TP.Hồ Chí Minh"
+                              placeholder="Hoa Bằng, Cầu Giấy, Hà Nội"
                               value="{{ old('address', Auth::guard('client')->user() -> profile -> address ) }}"
                               name="address_detail_1" required>
 
@@ -139,7 +139,7 @@
                           <div class="form-floating">
                             <label for="floatingInput5Grid">Căn hộ, số nhà, tên đường 2 (Tùy chọn)</label>
                             <input type="text" class="form-control" id="address_detail_2"
-                              placeholder="89 Nguyễn Đình Chiểu, quận Phú Nhuận, TP.Hồ Chí Minh"
+                              placeholder="Hoa Bằng, Cầu Giấy, Hà Nội"
                               value="{{ old('address', Auth::guard('client')->user() -> profile -> address ) }}"
                               name="address_detail_2">
 
@@ -150,7 +150,7 @@
                           <h2 class="title">Chọn phương thức thanh toán</h2>
                           <input type="radio" id="payment-method-cod" name="payment_method" value="1" checked>
                           <label for="payment-method-cod" class="text-lg">Thanh toán khi nhận hàng</label><br>
-                          <input type="radio" id="payment-method-paypal" name="payment_method" value="2" disabled>
+                          <input type="radio" id="payment-method-paypal" name="payment_method" value="2">
                           <label for="payment-method-paypal">Thanh toán qua Paypal</label><br>
                         </div>
 
@@ -219,7 +219,7 @@
                   </a>
                 </div>
                 <p>Ta vun đắp lên tổ ấm và tổ ấm sẽ định hình chúng ta</p>
-                <p>Số 3 Cầu Giấy, quận cầu giấy, thành phố Hà Nội</p>
+                <p>Số 3 Cầu Giấy, quận Cầu Giấy, thành phố Hà Nội</p>
                 <p>+84 033 919 9191 / +84 033 199 1119</p>
                 <p>diana@gmail.com</p>
               </div>
@@ -232,7 +232,7 @@
                 <h4 class="widget-title">Liên kết nhanh</h4>
                 <div class="widget-menu-wrap">
                   <ul class="nav-menu">
-                    <li><a href="page-search.html">Tìm kiếm</a></li>
+                    <li><a href="{{ route('client.product.search') }}">Tìm kiếm</a></li>
                     <li><a href="about.html">Về chúng tôi</a></li>
                     <li><a href="contact.html">Liên hệ</a></li>
                     <li><a href="shipping-policy.html">Chính sách giao hàng</a></li>
@@ -251,7 +251,7 @@
                 <div class="widget-menu-wrap">
                   <ul class="nav-menu">
                     <li><a href="{{ route('client.customer.login') }}">Đăng nhập</a></li>
-                    <li><a href="#/">Tài khoản của tôi</a></li>
+                    <li><a href="{{ route('client.customer.profile', ['id' => Auth::guard('client')->id() ]) }}">Tài khoản của tôi</a></li>
                     <li><a href="#/">Điều khoản và dịch vụ</a></li>
                     <li><a href="shop-shipping-policy.html">Chính sách giao hàng</a></li>
                     <li><a href="shop-checkout.html">Hệ thống thanh toán</a></li>

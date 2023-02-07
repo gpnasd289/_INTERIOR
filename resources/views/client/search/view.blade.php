@@ -37,7 +37,7 @@
                     <div class="col-12">
                       <div class="form-group">
                         <input class="form-control" type="search" name="keyword" placeholder="Tìm kiếm tại cửa hàng">
-                        <button class="btn-search">Search</button>
+                        <button class="btn-search" style="padding: 0px 15px">Tìm kiếm</button>
                       </div>
                     </div>
                   </div>

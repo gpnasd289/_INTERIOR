@@ -68,7 +68,7 @@ Route::group([], function() {
     Route::get('/shop',[ShopController::class,'index']) -> name('client.shop.view');
     Route::get('/shop/category/{id}',[ShopController::class,'shopWithCategory']) -> name('client.shop.cate.view');
     Route::get('/shop/product-type/{id}',[ShopController::class,'shopWithProductDisplayType']) -> name('client.shop.product.view');
-    Route::post('/search',[HomeController::class,'search']) -> name('client.product.search');
+    Route::get('/search',[HomeController::class,'search']) -> name('client.product.search');
     Route::get('/posts/show/{slug}',[HomeController::class,'showBlog']) -> name('client.blog.view');
     Route::get('/c/pdf/{id}', [BillController::class, 'clientPDF']) -> name('client.bill.pdf');
     Route::group(['middleware' => 'auth.client'],function () {

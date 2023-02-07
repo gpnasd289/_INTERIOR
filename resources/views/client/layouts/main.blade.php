@@ -46,7 +46,7 @@
                 </a>
               </div>
               <p>Ta vun đắp lên tổ ấm và tổ ấm sẽ định hình chúng ta</p>
-              <p>Số 3 Cầu Giấy, quận cầu giấy, thành phố Hà Nội</p>
+              <p>Số 3 Cầu Giấy, quận Cầu Giấy, thành phố Hà Nội</p>
               <p>+84 033 919 9191  / +84 033 199 1119</p>
               <p>diana@gmail.com</p>
             </div>
@@ -59,7 +59,7 @@
               <h4 class="widget-title">Liên kết nhanh</h4>
               <div class="widget-menu-wrap">
                 <ul class="nav-menu">
-                  <li><a href="page-search.html">Tìm kiếm</a></li>
+                  <li><a href="{{ route('client.product.search') }}">Tìm kiếm</a></li>
                   <li><a href="about.html">Về chúng tôi</a></li>
                   <li><a href="contact.html">Liên hệ</a></li>
                   <li><a href="shipping-policy.html">Chính sách giao hàng</a></li>
@@ -77,8 +77,13 @@
               <h4 class="widget-title">Thông tin</h4>
               <div class="widget-menu-wrap">
                 <ul class="nav-menu">
+                  
+                  @if(Auth::guard('client')->user())
+                  <li><a href="{{ route('client.customer.profile', ['id' => Auth::guard('client')->id() ]) }}">Tài khoản của tôi</a></li>
+                  @else 
                   <li><a href="{{ route('client.customer.login') }}">Đăng nhập</a></li>
-                  <li><a href="#/">Tài khoản của tôi</a></li>
+                  <li><a href="{{ route('client.customer.register') }}">Đăng ký</a></li>
+                  @endif
                   <li><a href="#/">Điều khoản và dịch vụ</a></li>
                   <li><a href="shop-shipping-policy.html">Chính sách giao hàng</a></li>
                   <li><a href="shop-checkout.html">Hệ thống thanh toán</a></li>

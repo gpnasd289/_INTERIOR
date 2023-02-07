@@ -31,21 +31,21 @@
               <div class="info-item">
                 <div class="info">
                   <h4 class="title">Địa chỉ</h4>
-                  <p>Your current address goes to here,120 example, country.</p>
+                  <p>Số 3 Cầu Giấy, quận Cầu Giấy, thành phố Hà Nội</p>
                 </div>
               </div>
               <div class="info-item">
                 <div class="info">
                   <h4 class="title">Số điện thoại</h4>
-                  <a href="tel:+8801234 567 890">+8801234 567 890</a>
-                  <a href="tel:+8801234 567 890">+8801234 567 890</a>
+                  <a href="tel:+8801234 567 890">+84 01234 567 890</a>
+                  <a href="tel:+8801234 567 890">+84 01234 567 890</a>
                 </div>
               </div>
               <div class="info-item">
                 <div class="info">
                   <h4 class="title">Web</h4> 
-                  <a href="mailto:info@example.com">info@example.com</a>
-                  <a href="mailto:www.example.com">www.example.com</a>
+                  <a href="mailto:info@example.com">diana@gmail.com</a>
+                  <a href="mailto:www.example.com">www.diana.com</a>
                 </div>
               </div>
             </div>
@@ -53,7 +53,7 @@
           <div class="col-lg-7">
             <!--== Start Contact Form ==-->
             <div class="contact-form">
-              <h4 class="contact-form-title">Tiêu đề</h4>
+              <h4 class="contact-form-title">Liên hệ</h4>
               <p class="desc">Biểu mẫu liên hệ</p>
               <form id="contact-form" action="http://whizthemes.com/mail-php/raju/arden/mail.php" method="post">
                 <div class="row row-gutter-20">

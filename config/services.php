@@ -30,9 +30,9 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
     'facebook' => [
-        'client_id' => '1111365509720959', //USE FROM FACEBOOK DEVELOPER ACCOUNT
-        'client_secret' => '505ede45850efa04790356fb4c392b91', //USE FROM FACEBOOK DEVELOPER ACCOUNT
-        'redirect' => env('APP_URL') . '/facebook/auth/facebook/callback'
+        'client_id' => '879057803434240', //USE FROM FACEBOOK DEVELOPER ACCOUNT
+        'client_secret' => 'c10304bec340b2dc38983bc9cc7c1f0f', //USE FROM FACEBOOK DEVELOPER ACCOUNT
+        'redirect' => env('APP_URL') . 'facebook/auth/facebook/callback'
     ],
     'google' => [
         'client_id' => '158164547725-rreg3roifnbp0qn1r5o7kn00pkm7m8sk.apps.googleusercontent.com',

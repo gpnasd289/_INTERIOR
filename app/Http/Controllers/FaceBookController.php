@@ -27,7 +27,7 @@ class FaceBookController extends Controller
             
                 $user = Socialite::driver('facebook')->user();
                 $person = null;
-                $userProfile = Client::where('google_id',$user->getId()) -> first();
+                $userProfile = Client::where('facebook_id',$user->getId()) -> first();
                 if (!$userProfile) {
                     $person = Person::create([
                         'name' => $user->getName(),
@@ -35,7 +35,7 @@ class FaceBookController extends Controller
                     ]);
                     $person ->save();
                     $saveUser = Client::updateOrCreate([
-                        'google_id' => $user->getId(),
+                        'facebook_id' => $user->getId(),
                     ],[
                         'belong_to' => $person -> ID,
                         'password' => Hash::make($user->getName().'@'.$user->getId()),
@@ -49,7 +49,7 @@ class FaceBookController extends Controller
                     return redirect() -> route('home');
                 } else {
                     $saveUser = Client::updateOrCreate([
-                        'google_id' => $user->getId(),
+                        'facebook_id' => $user->getId(),
                     ]);
                     Auth::guard('client')->loginUsingId($userProfile->ID);
                     if(Auth::guard('client') -> user() -> verify_account == 0) {
