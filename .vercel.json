@@ -1,11 +1,11 @@
 {
     "version":2,
     "functions": {
-        "entry/index.php": { "runtime": "vercel-php@0.5.2"}
+        "/public/index.php": { "runtime": "vercel-php@0.5.2"}
     },
     "route": [{
         "src": "/(.*)",
-        "dest": "/entry/index.php"
+        "dest": "/public/index.php"
     }]
     ,"env": {
         "APP_NAME": "Laravel Vercel",
