@@ -119,8 +119,8 @@ $("#clear-cart").on("click", function () {
     });
 });
 
-$(".remove").on("click", function () {
-    swal({
+$('body').on('click', 'a.remove', function() {
+       swal({
         title: "Xóa sản phẩm này khỏi giỏ hàng",
         text: "Bạn sẽ không hoàn tác lại thao tác này",
         type: "warning",
@@ -137,6 +137,25 @@ $(".remove").on("click", function () {
         }
     });
 });
+
+// $(".cart-item-wrap .cart-item .thumb a.remove").on("click", function () {
+//     swal({
+//         title: "Xóa sản phẩm này khỏi giỏ hàng",
+//         text: "Bạn sẽ không hoàn tác lại thao tác này",
+//         type: "warning",
+//         showCancelButton: true,
+//         confirmButtonClass: "btn btn-success",
+//         cancelButtonClass: "btn btn-danger m-l-10",
+//         confirmButtonText: "Tôi hiểu hãy xóa nó đi",
+//         cancelButtonText: "Hủy",
+//     }).then((result) => {
+//         if (result) {
+//             var id = $(this).data("id");
+//             var url = $(this).data("url");
+//             removeFromCart(id, url);
+//         }
+//     });
+// });
 
 $("#update-cart").on("click", function () {
     var url = $(this).data("url");
