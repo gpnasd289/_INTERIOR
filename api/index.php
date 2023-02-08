@@ -1,3 +1,3 @@
 <?php
 
-require __DIR__ . '/../src/public/index.php';
+require __DIR__ . '/../public/index.php';
