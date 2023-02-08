@@ -17,6 +17,8 @@ class ProductController extends Controller
     public static function getFileName($file_path) {
         $arr_string = explode('/',$file_path);
         array_shift($arr_string); 
+        array_shift($arr_string); 
+        array_shift($arr_string); 
         return join('/', $arr_string);
     }
 
@@ -242,6 +244,7 @@ class ProductController extends Controller
        
         $product ->  specification -> where('specificationType.ID', $color_id) -> value = $request -> color;
         $product ->  specification -> where('specificationType.ID', $material_id) -> value = $request -> material;
+        dd($product ->  specification -> where('specificationType.ID', $image_1_id) -> first() -> value);
         if ($product) {
             return redirect() -> route('admin.product.list') -> with('editSuccess','Chỉnh sửa thành công');
         } else {

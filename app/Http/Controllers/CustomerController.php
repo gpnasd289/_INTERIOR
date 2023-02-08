@@ -215,7 +215,7 @@ class CustomerController extends Controller
     }
 
     public function customerOrders($id) {
-        $orders = Bill::where('buyer', $id) -> orderBy('status') -> get();
+        $orders = Bill::where('buyer', $id) -> orderByDesc('ID') -> get();
         if (!$orders) {
             $orders = [];
         }

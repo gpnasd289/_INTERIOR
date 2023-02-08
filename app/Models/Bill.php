@@ -48,7 +48,7 @@ class Bill extends Model
     }
 
     public function customer_name() {
-        return $this -> customer() -> first() -> profile() -> first() -> name;
+        return $this -> customer() -> first() -> profile() -> first() -> name ?? "Khach vang lai";
     }
 
     public function total() {

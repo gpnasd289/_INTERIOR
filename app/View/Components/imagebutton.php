@@ -36,15 +36,39 @@ class imagebutton extends Component
         }
         switch($this -> preview -> ID) {
             case 2:
-                return $this -> product -> image_with_background_path();
+                $path = $this -> product -> image_with_background_path();
+                if (!str_contains($path, env('APP_URL'))) {
+                    return env('APP_URL') . '/'.  $path;
+                }
+                return $path;
             case 3:
-                return $this -> product -> image_1_path();
+                $path = $this -> product -> image_1_path();
+                if (!str_contains($path, env('APP_URL'))) {
+                    return env('APP_URL') . '/'.  $path;
+                }
+                return $path;
+     
             case 4:
-                return $this -> product -> image_2_path();
+                $path =  $this -> product -> image_2_path();
+                if (!str_contains($path, env('APP_URL'))) {
+                    return env('APP_URL') . '/'.  $path;
+                }
+                return $path;
+                
             case 5:
-                return $this -> product -> image_3_path();
+                $path = $this -> product -> image_3_path();
+                if (!str_contains($path, env('APP_URL'))) {
+                    return env('APP_URL') . '/'.  $path;
+                }
+                return $path;
+                 
             case 6:
-                return $this -> product -> image_no_background_path();
+                $path = $this -> product -> image_no_background_path();
+                if (!str_contains($path, env('APP_URL'))) {
+                    return env('APP_URL') . '/'.  $path;
+                }
+                return $path;
+                 
         }
     }
 }
