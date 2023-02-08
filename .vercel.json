@@ -1,17 +1,17 @@
 {
     "version":2,
     "functions": {
-        "entry/index.php": { "runtime": "vercel-php@0.5.2"}
+        "public/index.php": { "runtime": "vercel-php@0.5.2"}
     },
     "route": [{
         "src": "/(.*)",
-        "dest": "/entry/index.php"
+        "dest": "/public/index.php"
     }]
     ,"env": {
         "APP_NAME": "Laravel Vercel",
         "APP_ENV": "production",
         "APP_DEBUG": "false",
-        "APP_URL": "https://laravel-vercel.vercel.app",
+        "APP_URL": "https://xyz-vercel.vercel.app",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
