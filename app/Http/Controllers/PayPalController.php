@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Bill;
 use Illuminate\Http\Request;
 use Srmklive\PayPal\Services\PayPal as PayPalClient;
+use Gloudemans\Shoppingcart\Facades\Cart;
 
 class PayPalController extends Controller
 {

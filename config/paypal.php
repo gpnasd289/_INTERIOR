@@ -9,7 +9,7 @@ return [
     'sandbox' => [
         'client_id'         => env('PAYPAL_SANDBOX_CLIENT_ID', ''),
         'client_secret'     => env('PAYPAL_SANDBOX_CLIENT_SECRET', ''),
-        'app_id'            => 'APP-5337543811076107062',
+        'app_id'            => '',
     ],
     'live' => [
         'client_id'         => env('PAYPAL_LIVE_CLIENT_ID', ''),
